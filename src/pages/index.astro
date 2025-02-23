@@ -1,11 +1,260 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Education from "../components/Education.astro";
+import Projects from "../components/Projects.astro";
+import Title from "../components/Title.astro";
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-	<Welcome />
+  <main class="main-container">
+    <section class="summary-container">
+      <img width="283px" height="283px" src="/me.webp" alt="" />
+      <div class="summary">
+        <h1 class="name">Fernando Rodriguez</h1>
+        <p>
+          I am passionate about software development and UI/UX design,
+          constantly improving my skills in web and mobile development, as well
+          as exploring backend technologies.
+        </p>
+        <p>
+          I am a Systems Engineering student with a background in Programming
+          from my technical high school education.
+        </p>
+        <ul class="links-container">
+          <li>
+            <a href="/resume.pdf" target="_blank">Resume <span>↗</span></a>
+          </li>
+          <li>
+            <a href="https://github.com/fernandorose" target="_blank"
+              >Github <span>↗</span></a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/fernando-rodriguez-416b472b2/"
+              target="_blank">LinkedIn <span>↗</span></a
+            >
+          </li>
+          <li>
+            <a href="mailto:ferrodriguezsegura@gmail.com" target="_blank"
+              >Email me <span>↗</span></a
+            >
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="content-container">
+      <section class="education">
+        <Title title="Education" />
+        <Education
+          bachelor="Computer Science"
+          school="TecNM • ITCM"
+          date="September 2020 - Present"
+        >
+          <p>
+            Introduction and OOP with Java, introduction to databases, data
+            structures, Android Studio with Java and Kotlin, Jetpack Compose,
+            implementation of CRUD systems, algorithm design, artificial
+            intelligence.
+          </p>
+        </Education>
+        <Education
+          bachelor="Programming Technician"
+          school="CBTis 103"
+          date="August 2017 - August 2020"
+        >
+          <p>
+            Introduction to PSeInt, C#, web development (HTML, CSS), and Android
+            Studio with Java.
+          </p>
+        </Education>
+        <section>
+          <Title title="Projects" />
+          <Projects
+            url="https://github.com/fernandorose/smart-notes"
+            name="SmartNote"
+            tech="AstroJs • Flask • WebSockets • Git"
+          >
+            <p>
+              Developed an intelligent note-taking application with real-time
+              AI-powered content classification to boost productivity.
+              Integrated a neural network model for instant note categorization
+              and used WebSocket for seamless frontend-backend communication.
+              Built a Flask API to handle AI-based classification requests
+              efficiently.
+            </p>
+          </Projects>
+          <Projects
+            ulr="https://github.com/fernandorose/solid-key"
+            name="SolidKey"
+            tech="Typescript • Express • React • Git"
+          >
+            <p>
+              Developed a secure password management application with custom
+              password generation, allowing users to configure length and
+              character types. Utilized React Context API for efficient state
+              management and a seamless experience. Implemented a token decoding
+              and validation API to ensure data integrity and security.
+            </p>
+          </Projects>
+        </section>
+      </section>
+      <section class="skills">
+        <Title title="Skills" />
+        <h1>Databases</h1>
+        <li>Postgresql</li>
+        <li>MySQL</li>
+        <h1>Systems and tools</h1>
+        <li>Postgresql</li>
+        <li>MySQL</li>
+        <h1>Programming languages</h1>
+        <li>Postgresql</li>
+        <li>MySQL</li>
+        <h1>Frameworks</h1>
+        <li>Postgresql</li>
+        <li>MySQL</li>
+      </section>
+    </section>
+  </main>
+  <footer>
+    <p class="my-name">fernando</p>
+    <div class="footer-content">
+      <span>Fernando Rodriguez. All rights reserved</span>
+      <span>Built with Astro</span>
+    </div>
+  </footer>
 </Layout>
+
+<style>
+  @media (max-width: 768px) {
+    .main-container {
+      padding-inline: 20px;
+    }
+
+    footer {
+      padding-inline: 20px;
+    }
+
+    footer span {
+      font-size: 0.9rem;
+    }
+
+    footer p {
+      position: relative;
+      font-size: 6rem;
+      text-align: center;
+    }
+
+    .summary h1 {
+      font-size: 2.5rem;
+    }
+
+    .summary-container {
+      flex-direction: column;
+    }
+    .summary-container img {
+      margin: auto;
+    }
+    .content-container {
+      flex-direction: column;
+    }
+  }
+
+  .my-name {
+    position: absolute;
+    bottom: 30px;
+    right: 5px;
+    font-weight: 600;
+    letter-spacing: -0.5rem;
+    font-size: 9rem;
+  }
+  footer {
+    position: relative;
+    width: 100%;
+    padding-block: 30px;
+    margin-top: 30px;
+  }
+  footer span {
+    color: #a8a8a8;
+  }
+
+  .footer-content {
+    max-width: 750px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .main-container {
+    position: relative;
+    width: 100%;
+    max-width: 750px;
+    margin: auto;
+  }
+
+  .skills {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .skills h1 {
+    letter-spacing: -0.05rem;
+    font-weight: 600;
+    font-size: 1.5rem;
+  }
+
+  .skills li {
+    font-family: var(--mono-font);
+    color: var(--fg);
+  }
+
+  .name {
+    font-size: 2.8rem;
+  }
+
+  .summary {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .summary p {
+    color: var(--fg);
+  }
+
+  .summary-container {
+    display: flex;
+    gap: 20px;
+  }
+
+  .links-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .links-container li {
+    list-style: none;
+  }
+
+  .links-container li a {
+    font-weight: 600;
+  }
+
+  .content-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .education {
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .education p {
+    font-family: var(--mono-font);
+  }
+</style>

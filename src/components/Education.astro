@@ -1,0 +1,46 @@
+---
+const bachelor = Astro.props.bachelor;
+const school = Astro.props.school;
+const date = Astro.props.date;
+---
+
+<div class="education-container">
+  <h1>{bachelor}</h1>
+  <h2>{school}</h2>
+  <h3>{date}</h3>
+  <div class="content">
+    <span>Relevant coursework</span>
+    <slot />
+  </div>
+</div>
+
+<style>
+  .education-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  h1 {
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--accent);
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  h3 {
+    color: var(--fg);
+    font-weight: 400;
+  }
+  span {
+    color: #000;
+  }
+  .content {
+    color: var(--fg);
+    font-family: var(--mono-font);
+  }
+
+  .content p {
+  }
+</style>
