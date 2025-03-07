@@ -24,6 +24,7 @@ import Navbar from "../components/Navbar/index.astro";
 
 <style is:global>
   :root {
+    --background: url("/noice.webp");
     --mono-font: "Geist Mono Variable", monospace;
     --default-font: "Inter Variable", sans-serif;
 
@@ -50,6 +51,13 @@ import Navbar from "../components/Navbar/index.astro";
     padding: 0;
     box-sizing: border-box;
     font-family: var(--default-font);
+  }
+  body {
+    background: var(--background);
+    background-attachment: fixed;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #fff;
   }
   a {
     text-decoration: none;
