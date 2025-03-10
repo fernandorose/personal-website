@@ -7,6 +7,7 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
+  <!-- <img class="logo" width="60" src="/logo.svg" alt="" /> -->
   <section class="bg-container">
     <main class="main-container">
       <section class="summary-container">
@@ -173,6 +174,12 @@ import Layout from "../layouts/Layout.astro";
     }
   }
 
+  .logo {
+    position: fixed;
+    top: 50px;
+    left: 50px;
+  }
+
   .my-name {
     position: absolute;
     bottom: 30px;
@@ -215,7 +222,7 @@ import Layout from "../layouts/Layout.astro";
     width: 100%;
     max-width: 750px;
     margin: auto;
-    padding-top: 110px;
+    padding-top: 50px;
   }
 
   .skills {
@@ -237,7 +244,8 @@ import Layout from "../layouts/Layout.astro";
   }
 
   .name {
-    font-size: 2.8rem;
+    font-size: 3rem;
+    font-family: var(--condensed-font);
   }
 
   .summary {
