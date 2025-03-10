@@ -189,6 +189,11 @@ import Layout from "../layouts/Layout.astro";
   }
   footer span {
     color: #a8a8a8;
+    font-family: var(--condensed-font);
+  }
+
+  .footer-content p {
+    font-family: var(--condensed-font);
   }
 
   .footer-content {
@@ -227,7 +232,7 @@ import Layout from "../layouts/Layout.astro";
   }
 
   .skills li {
-    font-family: var(--mono-font);
+    font-family: var(--condensed-font);
     color: var(--fg);
   }
 
@@ -248,7 +253,6 @@ import Layout from "../layouts/Layout.astro";
   .summary-container {
     display: flex;
     gap: 20px;
-    border-bottom: dashed 1px #eeeeee;
     padding-block-end: 20px;
   }
 
@@ -268,6 +272,7 @@ import Layout from "../layouts/Layout.astro";
 
   .links-container li a {
     font-weight: 600;
+    font-family: var(--condensed-font);
   }
 
   .content-container {
